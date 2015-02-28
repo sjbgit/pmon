@@ -19,7 +19,34 @@
                 templateUrl: 'app/home/home.html',
                 controller: 'HomeCtrl',
                 controllerAs: 'vm'
-            });
+            })
+
+            .when('/web', {
+                templateUrl: 'app/web/web.html',
+                controller: 'WebCtrl',
+                controllerAs: 'vm'
+            })
+
+            .when('/redis', {
+                templateUrl: 'app/redis/redis.html',
+                controller: 'RedisCtrl',
+                controllerAs: 'vm'
+            })
+
+            .when('/sql', {
+                templateUrl: 'app/sql/sql.html',
+                controller: 'SqlCtrl',
+                controllerAs: 'vm'
+            })
+
+            .when('/workers', {
+                templateUrl: 'app/workers/workers.html',
+                controller: 'WorkersCtrl',
+                controllerAs: 'vm'
+            })
+
+
+        ;
 
         $routeProvider.otherwise('/');
     }
