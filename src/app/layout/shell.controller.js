@@ -15,6 +15,14 @@
         /* jshint validthis:true */
         var vm = this;
 
+        vm.addAlert = addAlert;
+        vm.closeAlert = closeAlert;
+
+        vm.alerts = [
+            { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
+            { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+        ];
+
         vm.showSpinner = false;
         vm.spinnerMessage = 'Retrieving data...';
 
@@ -32,6 +40,16 @@
         activate();
 
         function activate() { }
+
+
+        function addAlert() {
+            vm.alerts.push({msg: 'Another alert!'});
+        }
+
+        function closeAlert(index) {
+            console.log('close alert: ' + index);
+            vm.alerts.splice(index, 1);
+        }
 
         $rootScope.$on('spinner.toggle', function (event, args) {
             vm.showSpinner = args.show;

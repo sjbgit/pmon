@@ -6,21 +6,42 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
                     <i class="icon-home"></i>
-                    <span>Elite Schedule Admin</span>
+                    <span>Pulse Monitor</span>
                 </a>
             </div>
             <div class="collapse navbar-collapse" ng-class="{'in': !navCollapsed}">
                 <ul class="nav navbar-nav">
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/">Home</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/leagues">Leagues</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/locations">Locations</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/">Web</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/leagues">Redis</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/locations">Workers</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#/locations">SQL</a></li>
                 </ul>
             </div>
 
         </div>
+    </div>
+
+    <p>
+        <div>
+            Just some text
+            more text
+        </div>
+        <!--
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+        <button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+        -->
+    </p>
+
+    <div ng-hide="true">
+        <p>
+            <alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="vm.closeAlert($index)">{{alert.msg}}</alert>
+            <button class='btn btn-default' ng-click="vm.addAlert()">Add Alert</button>
+        </p>
+
     </div>
 
     <div ng-show="vm.showSpinner" class="page-splash dissolve-animation">
